@@ -1,9 +1,17 @@
 INÍCIO
-    LER N  // Número total de valores a serem lidos
+    // Solicita um valor positivo para N
+    FAÇA
+        ESCREVER "Digite um valor positivo para N:"
+        LER N
+    ENQUANTO N <= 0  // Repete até que N seja positivo
+
     contador_positivos <- 0  // Inicializa o contador de números positivos
+    soma <- 0  // Inicializa a soma dos números
 
     PARA i DE 1 ATÉ N FAÇA
+        ESCREVER "Digite o número", i, ":"
         LER numero
+        soma <- soma + numero  // Atualiza a soma com o número lido
         SE numero > 0 ENTÃO
             contador_positivos <- contador_positivos + 1
         FIM SE
@@ -11,7 +19,11 @@ INÍCIO
 
     SE N > 0 ENTÃO
         porcentagem_positivos <- (contador_positivos / N) * 100
+        media <- soma / N  // Calcula a média dos números lidos
+
         ESCREVER "A porcentagem de números positivos é:", porcentagem_positivos, "%"
+        ESCREVER "A soma dos números lidos é:", soma
+        ESCREVER "A média dos números lidos é:", media
     SENÃO
         ESCREVER "Nenhum número foi lido."
     FIM SE
