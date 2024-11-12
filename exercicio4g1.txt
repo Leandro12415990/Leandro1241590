@@ -1,0 +1,17 @@
+INÍCIO
+    LER valor_a
+    LER valor_b
+    LER valor_c
+
+    SE (valor_a + valor_b > valor_c) E (valor_a + valor_c > valor_b) E (valor_b + valor_c > valor_a) ENTÃO
+        SE (valor_a = valor_b) E (valor_b = valor_c) ENTÃO
+            ESCREVER "Os valores formam um triângulo equilátero."
+        SENÃO SE (valor_a = valor_b) OU (valor_a = valor_c) OU (valor_b = valor_c) ENTÃO
+            ESCREVER "Os valores formam um triângulo isósceles."
+        SENÃO
+            ESCREVER "Os valores formam um triângulo escaleno."
+        FIM SE
+    SENÃO
+        ESCREVER "Os valores não podem formar um triângulo."
+    FIM SE
+FIM
